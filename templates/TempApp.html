@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <table class="table-responsive-sm table-dark">
+  <thead>
+      <tr>
+      <th scope="col">CityName</th>
+      <th scope="col">Temperature</th>
+      <th scope="col">Humidity</th>
+      <th scope="col">Unit</th>
+      <th scope="col">Update</th>
+      </tr>
+  </thead>
+  <tbody>
+             {% for key, value in result.items() %}
+                <tr>
+                   {% for key2, value2 in value.items() %}
+                   <td> {{ value2 }} </td>
+                   {% endfor %}
+                </tr>
+             {% endfor %}
+</tbody>
+</table>
+</body>
+</html>
