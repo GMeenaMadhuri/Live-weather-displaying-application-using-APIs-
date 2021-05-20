@@ -40,6 +40,7 @@ def execute():
             temperature = main['temp']
             t.append(temperature)
             h.append(humidity)
+            
             #Add the necessary columns into the dictionary which needs to be updated in web page
             dd[City] = {'City': City, 'Temp': temperature, 'humidity': humidity,'Unit':df['Unit'][ind],'Update':df['Update'][ind]}
         df.insert(1, "temperature", t, True)
